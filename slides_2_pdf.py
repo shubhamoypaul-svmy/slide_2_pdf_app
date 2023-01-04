@@ -67,7 +67,7 @@ for uploaded_file in uploaded_files:
      name=uploaded_file.name
      #pdfFileObj = open(io.BytesIO(bytes_data))
      fun(io.BytesIO(bytes_data),5,name)
-     with open(name.split(".")[0]+'_new.pdf', "rb") as fp:
+     with open((name.split(".")[0])+'_new.pdf', "rb") as fp:
         btn = st.download_button(
             label="Download PDF",
             data=fp,
